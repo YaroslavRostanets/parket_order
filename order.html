@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="template_styles.css">
+    <link rel="stylesheet" href="css/new_styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="body">
+    <div id="tpanel" class="tpanel">
+        <div class="centering">
+            <div class="centeringin clearfix">
+                <div class="authandlocation nowrap">
+                    <div class="location">
+                        <form action="/personal/order/make/" method="POST" id="inheadlocform">
+                            <!--'start_frame_cache_inheadlocform'--><input type="hidden" name="sessid" id="sessid"
+                                                                           value="14505803383c64b2645e723371322755"><input
+                                type="hidden" name="RSLOC_AUTO_DETECT" value="Y"><input type="hidden" name="PARAMS_HASH"
+                                                                                        value=""><span>Ваш город: </span><a
+                                class="fancyajax fancybox.ajax big" href="/mycity/" title="Ваш город?">Киев<i
+                                class="icon pngicons"></i></a><!--'end_frame_cache_inheadlocform'--></form>
+                    </div>
+                    <div class="authinhead" id="inheadauthform"><!--'start_frame_cache_inheadauthform'-->
+                        <div class="authinheadinner logged"><i class="icon pngicons"></i><a
+                                href="/auth/?backurl=/personal/order/make/">Вход</a> | <a href="/auth/?register=yes">Регистрация</a>
+                        </div><!--'end_frame_cache_inheadauthform'--></div>
+                </div>
+                <div class="tpanel_menu clearfix mobile_hide"><a href="/about/">О компании</a><a href="/vendors/">Вендорам</a><a
+                        href="/suppliers/">Поставщикам</a><a href="/news/">Новости</a><a href="/action/">Акции</a><a
+                        href="/delivery/">Доставка</a><a href="/payment/">Оплата</a><a href="/guarantee/">Гарантия</a><a
+                        href="/contacts/">Контакты</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="header" class="header">
+        <div class="centering">
+            <div class="centeringin clearfix">
+                <div class="logo column1">
+                    <div class="column1inner"><a href="/"><img
+                            src="https://parket.bi3x.org/bitrix/templates/prostroy/img/Parket_poisk@2x.svg"
+                            title="OptPro" alt="OptPro" style="margin-left: 40px;padding-top: 12px;width: 165px;"
+                            width="165" height="92"></a></div>
+                </div>
+                <div class="phone column1 nowrap">
+                    <div class="column1inner"><i class="icon pngicons mobile_hide"></i>
+                        <h1>+38 (044) 209-30-15</h1>
+                        <a href="tel:+38 (044) 209-30-15"></a>
+                        <div class="contacts clearfix">
+                            <div class="phone1">
+                                <a class="fancyajax fancybox.ajax recall" title="Заказать звонок" href="/recall/"> <i
+                                        class="icon pngicons"></i>
+                                    Заказать звонок </a>
+
+                            </div>
+                            <div class="phone2">
+                                <a class="fancyajax fancybox.ajax feedback" title="Обратная связь" href="/feedback/"> <i
+                                        class="icon pngicons"></i>
+                                    Обратная связь </a>
+                                <div class="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <br></div>
+                </div>
+                <div class="callback column1 nowrap">
+                    <div class="column1inner"><a class="fancyajax fancybox.ajax big" href="/nasvyazi/"
+                                                 title="Мы всегда на связи">Свяжитесь с нами<i
+                            class="icon pngicons"></i></a></div>
+                </div>
+                <div class="favorite column1 nowrap">
+                    <div class="column1inner">
+                        <div class="rsfavorite">
+                            <a id="inheadfavorite" href="/personal/favorite/">
+                                <!--'start_frame_cache_inheadfavorite'--><i class="icon pngicons"></i>
+                                <div class="title opensansbold">Избранное</div>
+                                <div class="descr">Товаров&nbsp;(<span id="favorinfo">0</span>)</div>
+                                <!--'end_frame_cache_inheadfavorite'--></a></div>
+                    </div>
+                </div>
+                <div class="basket column1 nowrap">
+                    <div class="column1inner">
+                        <div class="basketinhead"><a href="/personal/cart/"><i class="icon pngicons"></i>
+                            <div class="title opensansbold">Моя корзина</div>
+                            <div id="basketinfo" class="descr"><!--'start_frame_cache_basketinfo'-->1 товар на 696 грн
+                                <!--'end_frame_cache_basketinfo'--></div>
+                        </a></div>
+                        <!--'start_frame_cache_oLJPsr'--><!--'end_frame_cache_oLJPsr'--></div>
+                </div>
+            </div>
+        </div>
+        <div class="centering">
+            <div class="centeringin clearfix">
+                <div class="catalogmenucolumn">
+                    <ul class="catalogmenu clearfix">
+                        <li class="parent"><a href="/catalog/" class="parent">Каталог товаров<i
+                                class="menu icon"></i></a>
+                            <ul class="first clearfix lvl1">
+                                <li class="first"><a href="/catalog/vinilovye_pokrytiya/" class="first"
+                                                     title="Виниловые покрытия">Виниловые покрытия<i
+                                        class="menu icon pngicons"></i></a>
+                                    <ul class="lvl2">
+                                        <li class="sub"><a href="/catalog/vinilovye_pokrytiya/zamkovye/" class="sub"
+                                                           title="Замковые">Замковые</a></li>
+                                        <li class="sub"><a href="/catalog/vinilovye_pokrytiya/kleevye/" class="sub"
+                                                           title="Клеевые">Клеевые</a></li>
+                                    </ul>
+                                </li>
+                                <li class="first"><a href="/catalog/laminat/" class="first" title="Ламинат">Ламинат</a>
+                                </li>
+                                <li class="first"><a href="/catalog/parketnaya_doska/" class="first"
+                                                     title="Паркетная доска">Паркетная доска</a></li>
+                                <li class="first"><a href="/catalog/probka/" class="first" title="Пробка">Пробка<i
+                                        class="menu icon pngicons"></i></a>
+                                    <ul class="lvl2">
+                                        <li class="sub"><a href="/catalog/probka/napolnaya_probka/" class="sub"
+                                                           title="Напольная пробка">Напольная пробка<i
+                                                class="menu icon pngicons"></i></a>
+                                            <ul class="lvl3">
+                                                <li class="sub"><a href="/catalog/probka/napolnaya_probka/zamkovaya/"
+                                                                   class="sub" title="Замковая">Замковая</a></li>
+                                                <li class="sub"><a href="/catalog/probka/napolnaya_probka/kleevaya/"
+                                                                   class="sub" title="Клеевая">Клеевая</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub"><a href="/catalog/probka/nastennaya_probka/" class="sub"
+                                                           title="Настенная пробка">Настенная пробка<i
+                                                class="menu icon pngicons"></i></a>
+                                            <ul class="lvl3">
+                                                <li class="sub"><a href="/catalog/probka/nastennaya_probka/3d_paneli/"
+                                                                   class="sub" title="3D панели">3D панели</a></li>
+                                                <li class="sub"><a href="/catalog/probka/nastennaya_probka/kora/"
+                                                                   class="sub" title="Кора">Кора</a></li>
+                                                <li class="sub"><a href="/catalog/probka/nastennaya_probka/listovaya/"
+                                                                   class="sub" title="Листовая">Листовая</a></li>
+                                                <li class="sub"><a href="/catalog/probka/nastennaya_probka/oboi/"
+                                                                   class="sub" title="Обои">Обои</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub"><a href="/catalog/probka/porozhki_probkovye/" class="sub"
+                                                           title="Порожки пробковые">Порожки пробковые</a></li>
+                                        <li class="sub"><a href="/catalog/probka/profili_probkovye/" class="sub"
+                                                           title="Профили пробковые">Профили пробковые</a></li>
+                                        <li class="sub"><a href="/catalog/probka/tekhnicheskaya_probka/" class="sub"
+                                                           title="Техническая пробка">Техническая пробка<i
+                                                class="menu icon pngicons"></i></a>
+                                            <ul class="lvl3">
+                                                <li class="sub"><a
+                                                        href="/catalog/probka/tekhnicheskaya_probka/granulyat/"
+                                                        class="sub" title="Гранулят">Гранулят</a></li>
+                                                <li class="sub"><a
+                                                        href="/catalog/probka/tekhnicheskaya_probka/listovaya_1/"
+                                                        class="sub" title="Листовая">Листовая</a></li>
+                                                <li class="sub"><a
+                                                        href="/catalog/probka/tekhnicheskaya_probka/rulonnaya/"
+                                                        class="sub" title="Рулонная">Рулонная</a></li>
+                                            </ul>
+                                        </li><!-- the end --></ul>
+                                </li>
+                                <li class="first"><a href="/catalog/plintus/" class="first" title="Плинтус">Плинтус</a>
+                                </li>
+                                <li class="first"><a href="/catalog/podlozhka/" class="first"
+                                                     title="Подложка">Подложка<i class="menu icon pngicons"></i></a>
+                                    <ul class="lvl2">
+                                        <li class="sub"><a href="/catalog/podlozhka/gidrobarer/" class="sub"
+                                                           title="Гидробарьер">Гидробарьер</a></li>
+                                        <li class="sub"><a href="/catalog/podlozhka/podlozhka_1/" class="sub"
+                                                           title="Подложка">Подложка</a></li>
+                                    </ul>
+                                </li>
+                                <li class="first lastchild"><a href="/catalog/khimiya/" class="first" title="Химия">Химия<i
+                                        class="menu icon pngicons"></i></a>
+                                    <ul class="lvl2">
+                                        <li class="sub"><a href="/catalog/khimiya/kleya/" class="sub"
+                                                           title="Клея">Клея</a></li>
+                                        <li class="sub"><a href="/catalog/khimiya/laki/" class="sub"
+                                                           title="Лаки">Лаки</a></li>
+                                        <li class="sub"><a href="/catalog/khimiya/soputstvuyushchie_materialy/"
+                                                           class="sub" title="Сопутствующие материалы">Сопутствующие
+                                            материалы</a></li>
+                                        <li class="sub"><a href="/catalog/khimiya/sredstva_po_ukhodu/" class="sub"
+                                                           title="Средства по уходу">Средства по уходу</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="catalogmenusmall clearfix">
+                        <li class="parent"><a href="/catalog/" class="parent">Каталог товаров<i
+                                class="menu icon"></i></a>
+                            <ul class="first clearfix lvl1 noned">
+                                <li class="first"><a href="/catalog/vinilovye_pokrytiya/" class="first">Виниловые
+                                    покрытия</a></li>
+                                <li class="first"><a href="/catalog/laminat/" class="first">Ламинат</a></li>
+                                <li class="first"><a href="/catalog/parketnaya_doska/" class="first">Паркетная доска</a>
+                                </li>
+                                <li class="first"><a href="/catalog/probka/" class="first">Пробка</a></li>
+                                <li class="first"><a href="/catalog/plintus/" class="first">Плинтус</a></li>
+                                <li class="first"><a href="/catalog/podlozhka/" class="first">Подложка</a></li>
+                                <li class="first lastchild"><a href="/catalog/khimiya/" class="first">Химия</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--'start_frame_cache_XdqEv1'-->
+                <div id="title-search" class="searchinhead nowrap">
+                    <form action="/search/"><i class="icon pngicons icon2"></i><i class="icon pngicons icon1"></i>
+                        <div class="aroundtext"><input class="text" id="title-search-input" type="text" name="q"
+                                                       value="" size="40" maxlength="50" autocomplete="off"
+                                                       placeholder="Введите название товара или артикул"></div>
+                        <input class="nonep" type="submit" name="s" value="Поиск"></form>
+                </div>
+                <!--'end_frame_cache_XdqEv1'--></div>
+        </div>
+    </div>
+    <div id="title" class="title">
+        <div class="centering">
+            <div class="centeringin clearfix">
+                <ul class="breadcrumb">
+                    <li id="bx_breadcrumb_0" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"
+                        itemref="bx_breadcrumb_1"
+                    "="">
+                    <a href="/" title="Главная страница" itemprop="url">Главная страница</a>
+                    </li>
+                    <li><span> / </span></li>
+                    <li id="bx_breadcrumb_1" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"
+                        itemprop="child"
+                    "="">
+                    <a href="/personal/" title="Мой кабинет" itemprop="url">Мой кабинет</a>
+                    </li>
+                    <li><span> / </span></li>
+                    <li>Мои заказы</li>
+                </ul>
+                <h1 class="pagetitle">Оформление заказа</h1></div>
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="centering">
+            <div id="order_form_content" class="order-form">
+                <div class="order-left">
+                    <div class="order-steps">
+                        <div class="step">
+                            <div class="title ico-1">
+                                <h2>Контактые данные</h2>
+                            </div>
+                            <div class="holder">
+                                <div class="order-tabs">
+                                    <ul class="tabs">
+                                        <li>
+                                            <a href="#" class="active">
+                                                Я новый покупатель
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Я постоянный клиент
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tabs-frame">
+                                        <div class="tab">
+                                            <div class="suggest">
+                                                <p>Пожалуйста, укажите фамилию для безошибочной отправки и доставки заказа</p>
+                                            </div>
+                                            <div class="row">
+                                                <input type="text" class="text"
+                                                       maxlength="250" size="40" value="" required="required"
+                                                       placeholder="Ваши Имя Фамилия *">
+                                            </div>
+                                            <div class="row">
+                                                <input type="text" class="text"
+                                                       maxlength="250"
+                                                       onchange="if($('#ORDER_PROP_3').val().length==18){submitForm('N')}"
+                                                      required="required" placeholder="Ваш телефон *">
+                                            </div>
+                                            <div class="row">
+                                                <input type="email" class="text"
+                                                       maxlength="250"
+                                                       size="40" value=""
+                                                       required="required" placeholder="Ваш email *">
+                                            </div>
+                                            <div class="row">
+                                                <div class="location">
+                                                    <p>Выберите пожалуйста Ваш город для дальнейшего корректного оформления заказа</p><br>
+                                                </div>
+                                                <input autocomplete="off"
+                                                       placeholder="Ваш город"
+                                                       type="text" rows="2" class="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="title ico-2">
+                                <h2>Способ доставки</h2>
+                            </div>
+                            <div class="holder">
+                                <div class="frame">
+                                    <div class="order-cells">
+                                        <div class="delivery-list">
+                                            <div class="item" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                                <a href="">
+                                                    <img src="img/img-delivery01.png" alt="">
+                                                    <span>Самовывоз со склада</span>
+                                                </a>
+                                            </div>
+                                            <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
+                                                <a href="">
+                                                    <img src="img/img-delivery02.png" alt="">
+                                                    <span>Курьером новой почтой</span>
+                                                </a>
+                                            </div>
+                                            <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
+                                                <a href="">
+                                                    <img src="img/img-delivery03.png" alt="">
+                                                    <span>На отделение новой почты</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="title ico-3">
+                                <h2>Способ оплаты</h2>
+                            </div>
+                            <div class="holder">
+                                <div class="frame">
+                                    <div class="order-pays">
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay1.png" alt="">
+                                            <span>
+                                                При получении
+                                            </span>
+                                        </a>
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay2.png" alt="">
+                                            <span>
+                                                Банковские карты
+                                            </span>
+                                        </a>
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay3.png" alt="">
+                                            <span>
+                                                Приват 24
+                                            </span>
+                                        </a>
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay4.png" alt="">
+                                            <span>
+                                                Кредит
+                                            </span>
+                                        </a>
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay5.png" alt="">
+                                            <span>
+                                                Безналом с НДС
+                                            </span>
+                                        </a>
+                                        <a href="#" class="pay-item">
+                                            <img src="img/pay5.png" alt="">
+                                            <span>
+                                                Безналом без НДС
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-box">
+                        <div class="comments-block">
+                            <a href="javascript:void(0);" class="link comments-link">Добавить комментарий к заказу</a>
+                            <div class="row show-comment">
+                                <textarea placeholder="Комментарий к заказу" style="max-width:100%;min-height:120px"></textarea>
+                            </div>
+                            <a href="javascript:void(0);" class="order-button button disabled">
+                                ОФОРМИТЬ ЗАКАЗ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-right">
+                    <div class="cart">
+                        <div class="title">
+                            <h3>Товары в вашем заказе</h3>
+                        </div>
+                        <div class="cart-item">
+                            <div class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWVrCF0zAscKSzAxvoses2ktkOQhP0lip5R9tepop8aq9C-ERX0A" alt="">
+                            </div>
+                            <div class="item-char">
+                                <a href="#" class="name">
+                                    Vinylcomfort Light Beech (артикул B0T0002, класс нагрузки 33,
+                                    толщина винилового слоя 0.55 мм, 4-сторонняя фаска)
+                                </a>
+                                <div class="bot-line">
+                                    <div class="quantity">
+                                        <div class="cell">
+                                            <input class="minus" value="-" type="button">
+                                            <input class="number" value="2 пач." type="text">
+                                            <input class="plus" value="+" type="button">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" class="footer"><!-- footer -->
+        <div class="centering">
+            <div class="centeringin line1 clearfix">
+                <div class="block one">
+                    <div class="logo"><a href="/"></a></div>
+                    <div class="contacts clearfix">
+                        <div class="phone1">
+                            <div class="phone"><a href="tel:044209-30-15">+38 (044) 209-30-15</a></div>
+                            <a class="fancyajax fancybox.ajax recall" href="/recall/" title="Заказать звонок"><i
+                                    class="icon pngicons"></i>Заказать звонок</a></div>
+                        <div class="phone2"><a class="fancyajax fancybox.ajax feedback" href="/feedback/"
+                                               title="Обратная связь"><i class="icon pngicons"></i>Обратная связь</a>
+                            <div class="phone"></div>
+                        </div>
+                        <div class="address"><b>Адрес:</b> г. Киев, ул. Мишуги 2 (3 мин. пешком от ст. метро Позняки)
+                            <br>
+                            <b>График работы магазина:</b>&nbsp;<br>
+                            Пн-Пт с &nbsp;9&nbsp;до 19<br>
+                            Сб-Вс с 11&nbsp;до 15 <br>
+                            <b>График работы контакт центра:</b> <br>
+                            Пн-Вс с 9 до 20
+                        </div>
+                    </div>
+                </div>
+                <div class="block two">
+                    <div class="catmenu ellipsisnames clearfix">
+                        <div class="title">Товары</div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/vinilovye_pokrytiya/"
+                                                              title="Виниловые покрытия"><span>Виниловые покрытия</span></a>
+                            </div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/laminat/"
+                                                              title="Ламинат"><span>Ламинат</span></a></div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/parketnaya_doska/" title="Паркетная доска"><span>Паркетная доска</span></a>
+                            </div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/probka/" title="Пробка"><span>Пробка</span></a>
+                            </div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/plintus/"
+                                                              title="Плинтус"><span>Плинтус</span></a></div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/podlozhka/"
+                                                              title="Подложка"><span>Подложка</span></a></div>
+                        </div>
+                        <div class="aroundlevel">
+                            <div class="item depth_level1"><a href="/catalog/khimiya/" title="Химия"><span>Химия</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block right">
+                    <div class="catmenu">
+                        ОСТАВИТЬ ОТЗЫВ<br>
+                        <div class="item depth_level1">
+                            <a class="fancyajax fancybox.ajax feedback" title="Сказать спасибо" href="/feedback">
+                                Сказать спасибо </a>
+                        </div>
+                        <div class="item depth_level1">
+                            <a class="fancyajax fancybox.ajax feedback" title="Поделиться идеей" href="/feedback">
+                                Поделиться идеей </a>
+                        </div>
+                        <div class="item depth_level1">
+                            <a class="fancyajax fancybox.ajax feedback" title="Отправить претензию" href="/feedback">
+                                Отправить претензию </a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+                <div class="block three">
+                    <div class="footmenu clearfix">
+                        <div class="title">Дополнительно</div>
+                        <div class="item"><a href="/about/"><span>О компании</span></a></div>
+                        <div class="item"><a href="/vendors/"><span>Оптовикам</span></a></div>
+                        <div class="item"><a href="/suppliers/"><span>Поставщикам</span></a></div>
+                        <div class="item"><a href="/news/"><span>Новости</span></a></div>
+                        <div class="item"><a href="/action/"><span>Акции</span></a></div>
+                        <div class="item"><a href="/delivery/"><span>Доставка</span></a></div>
+                        <div class="item"><a href="/payment/"><span>Оплата</span></a></div>
+                        <div class="item"><a href="/guarantee/"><span>Гарантия</span></a></div>
+                        <div class="item"><a href="/contacts/"><span>Контакты</span></a></div>
+                    </div>
+                </div>
+                <div class="block four">
+                    <div class="sovservice">
+                        <div style="margin-bottom:25px;">
+                            <div style="margin-bottom:6px;text-transform:uppercase;">Присоединяйся</div>
+                            <a href="https://www.instagram.com/parketpoisk/"><img
+                                    src="img/ins.png" width="21" alt=""></a>
+                            <a href="https://www.facebook.com/parketpoisk/"><img
+                                    src="img/fb_ico.png" alt=""></a>
+                            <a href="https://plus.google.com/u/0/b/112041734770501087158/112041734770501087158"><img
+                                    src="img/gplus_ico.png" alt=""></a>
+                            <a href="https://www.youtube.com/channel/UCb2s2NviaF9e8wdAIiPa77A"><img
+                                    src="img/youtube_ico.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        <div class="footersubscribe" id="footersubscribe">
+                            <div class="title">Подписка на новости</div><!--'start_frame_cache_footersubscribe'-->
+                            <form action="/personal/subscribe/"><input class="noned" type="checkbox" name="sf_RUB_ID[]"
+                                                                       value="1" checked="" title="Новости сайта"><input
+                                    class="noned" type="checkbox" name="sf_RUB_ID[]" value="2" checked=""
+                                    title="Акции на сайте">
+                                <div class="inp"><input type="text" name="sf_EMAIL" size="20" value=""
+                                                        title="Введите ваш e-mail" placeholder="Введите ваш e-mail">
+                                </div>
+                                <input class="nonep" type="submit" name="OK" value="Подписаться"><a class="btn1 submit"
+                                                                                                    href="#">Подписаться</a>
+                            </form><!--'end_frame_cache_footersubscribe'--></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line2">
+            <div class="centering">
+                <div class="centeringin clearfix">
+                    <div class="sitecopy">© Все права защищены. Информация сайта защищена законом об авторских правах.
+                    </div>
+                    <div class="developercopy">Powered by <a href="http://redsign.ru/" target="_blank">ALFA Systems</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</div>
+</body>
+</html>

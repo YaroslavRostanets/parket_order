@@ -1,0 +1,50 @@
+.bx-core-adm-dialog{
+    border-radius: 0;
+}
+.bx-core-adm-dialog .bx-core-adm-dialog-head{
+    font-size:24px;
+    font-family:Opensanslight,Arial,Helvetica,sans-serif !important;
+    background: #fff;
+    box-shadow: none;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 16px 20px;
+    height: auto;
+    line-height: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bx-core-adm-dialog .bx-core-adm-dialog-head-inner{
+    margin: 0 !important;
+}
+.bx-core-adm-dialog .bx-core-adm-dialog-head-icons{
+    background: none;
+    margin: 22px 10px 0 10px;
+}
+.bx-core-adm-dialog .bx-core-adm-icon-close{
+    background-image: url('../img/icons.png?v100');
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    background-position: 0px -91px;
+}
+.bx-core-adm-dialog .bx-core-adm-dialog-buttons input[type="button"]{
+    padding: 11px 14px;
+    background: #c4010c !important;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    font: 13px Opensanslight,Arial,Helvetica,sans-serif !important;
+    height: auto;
+    line-height: 1 !important;
+    text-shadow: none !important;
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;
+}
+.bx-core-adm-dialog .bx-core-adm-dialog-content{
+    border: 0;
+    background: none;
+}
+#store_table .store_row:hover, #store_table .checked{
+    border: 2px solid #F5F9F9 !important;
+}
