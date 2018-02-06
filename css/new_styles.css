@@ -1,6 +1,18 @@
 .order-left {
   float: left;
   width: 606px; }
+  .order-left .flex {
+    display: flex; }
+    .order-left .flex:after {
+      display: none; }
+    .order-left .flex:before {
+      display: none; }
+  .order-left .s-between {
+    justify-content: space-between; }
+  .order-left .login-btn {
+    margin-right: 15px; }
+    .order-left .login-btn:hover {
+      text-decoration: none !important; }
 
 .order-right {
   float: right;
@@ -12,21 +24,52 @@
     -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2); }
+    .order-right .cart .title {
+      padding: 0 0 17px;
+      font-size: 19px;
+      font-weight: 500;
+      color: #575757; }
+      .order-right .cart .title h3 {
+        font-size: 19px; }
   .order-right .cart-item {
     border-bottom: 1px solid #eaeaea;
-    padding: 15px 0;
+    border-top: 1px solid #eaeaea;
+    margin-top: -1px;
+    padding: 15px 25px 0 15px;
     position: relative;
     overflow: hidden;
     display: flex; }
+    .order-right .cart-item .this-remove {
+      position: absolute;
+      right: 1px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/bg-tag-delete.png) no-repeat; }
+    .order-right .cart-item .packs {
+      font-size: 15px;
+      color: #838383;
+      margin-left: 7px;
+      font-weight: bolder; }
+    .order-right .cart-item:first-child {
+      margin-top: 0; }
     .order-right .cart-item .cell {
       display: flex; }
     .order-right .cart-item .quantity .number {
       padding: 3px 6px;
       font-size: 14px;
-      width: 60px; }
+      width: 60px;
+      height: 30px; }
     .order-right .cart-item .quantity .plus, .order-right .cart-item .quantity .minus {
       width: 28px;
-      height: 100%;
+      height: 30px;
+      padding: 0;
+      line-height: 20px;
       background: #f9f9f9;
       border: 1px solid #e8e8e8;
       cursor: pointer;
@@ -35,6 +78,8 @@
       align-items: center;
       justify-content: center;
       color: #FFFFFF; }
+      .order-right .cart-item .quantity .plus:active, .order-right .cart-item .quantity .plus:hover, .order-right .cart-item .quantity .plus:focus, .order-right .cart-item .quantity .minus:active, .order-right .cart-item .quantity .minus:hover, .order-right .cart-item .quantity .minus:focus {
+        text-decoration: none; }
     .order-right .cart-item .image {
       width: 60px;
       height: 40px;
@@ -47,17 +92,51 @@
         display: block;
         width: auto;
         height: auto; }
+    .order-right .cart-item .cell-wrap {
+      display: flex;
+      align-items: center; }
     .order-right .cart-item .item-char {
       width: calc( 100% - 60px );
       padding-left: 15px; }
       .order-right .cart-item .item-char .name {
+        display: block;
+        width: 100%;
         color: #2d2d2d;
         font-size: 15px;
         font-weight: bold;
+        margin-bottom: 15px;
         transition: color 0.1s ease; }
         .order-right .cart-item .item-char .name:hover {
-          color: #009d3c;
+          color: #C4010C;
           text-decoration: none; }
+      .order-right .cart-item .item-char .quantity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+  .order-right .bot-line .price {
+    color: #C4010C;
+    font-size: 18px;
+    font-weight: bold; }
+  .order-right .total-holder {
+    margin: 20px 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; }
+    .order-right .total-holder .total {
+      width: auto;
+      color: #a2a2a2;
+      font-size: 16px;
+      line-height: 30px; }
+      .order-right .total-holder .total td:first-child {
+        padding-right: 35px; }
+    .order-right .total-holder .total-text {
+      color: #575757;
+      font-size: 17px;
+      font-weight: 500; }
+    .order-right .total-holder .total-price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #C4010C; }
 
 .order-steps {
   width: 100%;
@@ -67,12 +146,12 @@
   width: 100%;
   position: relative; }
   .order-form .link {
-    color: #009d3c;
+    color: #C4010C;
     font-size: 14px;
     text-decoration: none;
     display: inline-block;
     margin: 0 0 20px;
-    border-bottom: 1px dashed #009d3c; }
+    border-bottom: 1px dashed #C4010C; }
     .order-form .link:hover {
       border-bottom: none; }
   .order-form textarea {
@@ -88,7 +167,7 @@
   .order-form .suggest {
     margin: 0 0 15px;
     padding: 0 0 0 40px;
-    background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/ico-suggestion.png) no-repeat 0 50%;
+    background: url("../img/ico-suggestion.png") no-repeat 0 50%;
     font-size: 15px;
     color: #575757; }
   .order-form .text {
@@ -115,10 +194,10 @@
   .order-box .order-button {
     display: inline-block;
     vertical-align: top;
-    background: #009d3c;
+    background: #C4010C;
     border: 0;
     cursor: pointer;
-    border-bottom: 3px solid #027b30;
+    border-bottom: 3px solid #C4010C;
     color: #fff;
     border-radius: 6px;
     overflow: hidden;
@@ -148,6 +227,10 @@
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.5px; }
+    .order-tabs .tabs li:first-child a {
+      -webkit-box-shadow: inset 0 -3px 5px 2px rgba(200, 200, 200, 0.2);
+      -moz-box-shadow: inset 0 -3px 5px 2px rgba(200, 200, 200, 0.2);
+      box-shadow: inset 0 -3px 5px 2px rgba(200, 200, 200, 0.2); }
   .order-tabs .tabs a {
     color: #575757;
     font-size: 16px;
@@ -155,35 +238,45 @@
     height: 60px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    -webkit-box-shadow: inset 5px -6px 5px 0px rgba(200, 200, 200, 0.2);
+    -moz-box-shadow: inset 5px -6px 5px 0px rgba(200, 200, 200, 0.2);
     box-shadow: inset 5px -6px 5px 0px rgba(200, 200, 200, 0.2); }
     .order-tabs .tabs a.active {
-      border-top: 2px solid #009d3c;
-      box-shadow: none; }
+      border-top: 2px solid #C4010C;
+      box-shadow: none !important; }
+    .order-tabs .tabs a:focus {
+      text-decoration: none; }
     .order-tabs .tabs a:hover {
       text-decoration: none; }
 
 .order-steps .step {
-  background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/bg-dash.png) repeat-y 25px 0;
+  background: url("../img/bg-dash.png") repeat-y 25px 0;
   padding: 0 0 20px; }
   .order-steps .step:last-child {
     background: none; }
+  .order-steps .step.active .title.ico-1 {
+    background: url("../img/ico-order01-active.png") no-repeat 0 50%; }
+  .order-steps .step.active .holder {
+    opacity: 1; }
   .order-steps .step .frame {
     padding: 25px; }
   .order-steps .step .holder {
     margin: 12px 0 0 60px;
     background: #fff;
     border-radius: 6px;
+    opacity: 0.4;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); }
   .order-steps .step .title {
     padding: 0 0 0 60px; }
     .order-steps .step .title.ico-1 {
-      background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/ico-order01-active.png) no-repeat 0 50%; }
+      background: url("../img/ico-order01.png") no-repeat 0 50%; }
     .order-steps .step .title.ico-2 {
-      background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/ico-order02.png) no-repeat 0 50%; }
+      background: url("../img/ico-order02.png") no-repeat 0 50%; }
     .order-steps .step .title.ico-3 {
-      background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/ico-order03.png) no-repeat 0 50%; }
+      background: url("../img/ico-order03.png") no-repeat 0 50%; }
     .order-steps .step .title h2 {
       font-size: 19px;
       color: #575757;
@@ -216,6 +309,8 @@
       .order-steps .step .item > a span {
         display: block;
         margin: 18px 0 0; }
+      .order-steps .step .item > a:hover {
+        text-decoration: none; }
 
 .order-cells:after {
   content: "";
@@ -240,9 +335,11 @@
     padding: 10px;
     outline: none;
     color: #969696;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    position: relative; }
     .order-pays .pay-item:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      border-color: #d3d3d3; }
     .order-pays .pay-item span {
       display: block;
       margin: 18px 0 0;

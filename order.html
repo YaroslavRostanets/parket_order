@@ -245,7 +245,7 @@
             <div id="order_form_content" class="order-form">
                 <div class="order-left">
                     <div class="order-steps">
-                        <div class="step">
+                        <div class="step active">
                             <div class="title ico-1">
                                 <h2>Контактые данные</h2>
                             </div>
@@ -253,18 +253,18 @@
                                 <div class="order-tabs">
                                     <ul class="tabs">
                                         <li>
-                                            <a href="#" class="active">
+                                            <a href="javascript:void(0);" data-tab=".sign-up-tab" class="active one-tab-btn">
                                                 Я новый покупатель
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="javascript:void(0);" data-tab=".sign-in-tab" class="one-tab-btn">
                                                 Я постоянный клиент
                                             </a>
                                         </li>
                                     </ul>
                                     <div class="tabs-frame">
-                                        <div class="tab">
+                                        <div class="tab sign-up-tab">
                                             <div class="suggest">
                                                 <p>Пожалуйста, укажите фамилию для безошибочной отправки и доставки заказа</p>
                                             </div>
@@ -294,6 +294,20 @@
                                                        type="text" rows="2" class="text">
                                             </div>
                                         </div>
+                                        <div class="tab sign-in-tab">
+                                            <div class="row">
+                                                <input class="text email" type="text" name="USER_LOGIN" value="" placeholder="Логин (почта)*">
+                                            </div>
+                                            <div class="row">
+                                                <input class="text password-input" type="password" name="USER_PASSWORD" autocomplete="off" placeholder="Пароль*">
+                                            </div>
+                                            <div class="row">
+                                                <input class="button login-btn" type="submit" name="Login" value="ВОЙТИ">
+                                                <noindex>
+                                                    <a href="#password-popup" class="link link-forgot link-popup" rel="nofollow">Забыли свой пароль?</a>
+                                                </noindex>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -310,18 +324,27 @@
                                                 <a href="">
                                                     <img src="img/img-delivery01.png" alt="">
                                                     <span>Самовывоз со склада</span>
+                                                    <span class="popover">
+                                                        Сначала заполните контактные данные
+                                                    </span>
                                                 </a>
                                             </div>
                                             <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
                                                 <a href="">
                                                     <img src="img/img-delivery02.png" alt="">
                                                     <span>Курьером новой почтой</span>
+                                                    <span class="popover">
+                                                        Сначала заполните контактные данные
+                                                    </span>
                                                 </a>
                                             </div>
                                             <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
                                                 <a href="">
                                                     <img src="img/img-delivery03.png" alt="">
                                                     <span>На отделение новой почты</span>
+                                                    <span class="popover">
+                                                        Сначала заполните контактные данные
+                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -394,25 +417,50 @@
                         <div class="title">
                             <h3>Товары в вашем заказе</h3>
                         </div>
-                        <div class="cart-item">
-                            <div class="image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWVrCF0zAscKSzAxvoses2ktkOQhP0lip5R9tepop8aq9C-ERX0A" alt="">
-                            </div>
-                            <div class="item-char">
-                                <a href="#" class="name">
-                                    Vinylcomfort Light Beech (артикул B0T0002, класс нагрузки 33,
-                                    толщина винилового слоя 0.55 мм, 4-сторонняя фаска)
-                                </a>
-                                <div class="bot-line">
-                                    <div class="quantity">
-                                        <div class="cell">
-                                            <input class="minus" value="-" type="button">
-                                            <input class="number" value="2 пач." type="text">
-                                            <input class="plus" value="+" type="button">
+                        <div class="item-char-cont">
+                            <div class="cart-item">
+                                <div class="image">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWVrCF0zAscKSzAxvoses2ktkOQhP0lip5R9tepop8aq9C-ERX0A" alt="">
+                                </div>
+                                <div class="item-char">
+                                    <a href="#" class="name">
+                                        Vinylcomfort Light Beech (артикул B0T0002, класс нагрузки 33,
+                                        толщина винилового слоя 0.55 мм, 4-сторонняя фаска)
+                                    </a>
+                                    <div class="bot-line">
+                                        <div class="quantity">
+                                            <div class="cell-wrap">
+                                                <div class="cell">
+                                                    <input class="minus" value="-" type="button">
+                                                    <input class="number" value="2 пач." type="text">
+                                                    <input class="plus" value="+" type="button">
+                                                </div>
+                                                <span class="packs">(3.612 м²)</span>
+                                            </div>
+                                            <strong class="price">4186 <span>грн</span></strong>
                                         </div>
                                     </div>
+                                    <a href="javascript:void(0);" class="this-remove"></a>
                                 </div>
                             </div>
+
+                            <div class="total-holder">
+                                <table class="total">
+                                    <tr>
+                                        <td>Товаров на:</td>
+                                        <td>4 186.31 грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="total-text">
+                                            Итого:
+                                        </td>
+                                        <td class="total-price">
+                                            4 186.31 грн
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -557,6 +605,7 @@
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/new_main.js"></script>
 
 </div>
 </body>
