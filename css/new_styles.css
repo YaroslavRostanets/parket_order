@@ -1,6 +1,5 @@
 .order-left {
-  float: left;
-  width: 606px; }
+  width: calc( 100% - 635px ); }
   .order-left .flex {
     display: flex; }
     .order-left .flex:after {
@@ -15,12 +14,14 @@
       text-decoration: none !important; }
 
 .order-right {
-  float: right;
-  width: 606px; }
+  width: 606px;
+  position: relative; }
   .order-right .cart {
     background: #fff;
     border-radius: 6px;
     padding: 30px;
+    width: 606px;
+    top: 30px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2); }
@@ -35,7 +36,7 @@
     border-bottom: 1px solid #eaeaea;
     border-top: 1px solid #eaeaea;
     margin-top: -1px;
-    padding: 15px 25px 0 15px;
+    padding: 15px 25px 15px 0;
     position: relative;
     overflow: hidden;
     display: flex; }
@@ -144,7 +145,10 @@
 
 .order-form {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between; }
   .order-form .link {
     color: #C4010C;
     font-size: 14px;
@@ -153,7 +157,9 @@
     margin: 0 0 20px;
     border-bottom: 1px dashed #C4010C; }
     .order-form .link:hover {
-      border-bottom: none; }
+      border-bottom: 1px dashed transparent; }
+    .order-form .link:hover, .order-form .link:active, .order-form .link:focus {
+      text-decoration: none; }
   .order-form textarea {
     border: 1px solid #e8e8e8;
     border-radius: 5px;
@@ -187,6 +193,8 @@
     font-size: 15px;
     color: #575757;
     background-size: 40px 36px; }
+  .order-form .show-comment {
+    display: none; }
 
 .order-box {
   margin: 30px 0 0;
@@ -210,6 +218,8 @@
     padding: 16px 18px;
     width: 210px;
     text-align: center; }
+    .order-box .order-button:hover, .order-box .order-button:focus, .order-box .order-button:active {
+      text-decoration: none; }
 
 .order-tabs .tabs-frame {
   padding: 30px; }
@@ -284,10 +294,17 @@
       font-weight: 500; }
   .order-steps .step .item {
     text-align: center;
-    width: 150px;
+    width: 30%;
     float: left;
-    margin: 0 0 0 22px;
+    margin: 0 0 0 20px;
     box-sizing: border-box; }
+    .order-steps .step .item:hover > a {
+      border-color: #d3d3d3; }
+    .order-steps .step .item:hover .popover {
+      display: block;
+      -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+      -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+      -ms-animation: fade-in .3s linear 1, move-up .3s linear 1; }
     .order-steps .step .item:first-child {
       margin-left: 0; }
     .order-steps .step .item img {
@@ -295,7 +312,7 @@
       vertical-align: top;
       opacity: 0.5; }
     .order-steps .step .item > a {
-      width: 150px;
+      width: 100%;
       height: 150px;
       display: table-cell;
       vertical-align: middle;
@@ -305,7 +322,8 @@
       font-size: 15px;
       box-sizing: border-box;
       padding: 10px;
-      outline: none; }
+      outline: none;
+      position: relative; }
       .order-steps .step .item > a span {
         display: block;
         margin: 18px 0 0; }
@@ -322,7 +340,7 @@
   flex-wrap: wrap;
   justify-content: space-between; }
   .order-pays .pay-item {
-    width: 150px;
+    width: 30%;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -337,6 +355,24 @@
     color: #969696;
     margin-bottom: 25px;
     position: relative; }
+    .order-pays .pay-item .soon {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 58%;
+      margin-top: -30px;
+      text-align: center; }
+      .order-pays .pay-item .soon em {
+        display: inline-block;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 0 15px;
+        line-height: 30px;
+        font-style: normal;
+        background: rgba(45, 45, 45, 0.5);
+        border-radius: 3px; }
     .order-pays .pay-item:hover {
       text-decoration: none;
       border-color: #d3d3d3; }
@@ -344,5 +380,99 @@
       display: block;
       margin: 18px 0 0;
       text-align: center; }
+
+.popover-container {
+  background-color: rgba(196, 1, 12, 0.95);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Helvetica',sans-serif;
+  left: 50%;
+  bottom: 100%;
+  transform: translateY(-50%);
+  padding: 7px 10px;
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  height: 50px;
+  display: none;
+  z-index: 999; }
+  .popover-container:before {
+    border-top: 7px solid rgba(196, 1, 12, 0.95);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    bottom: -7px;
+    content: '';
+    display: block;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute; }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@media (max-width: 1200px) {
+  .order-left {
+    width: calc( 100% - 520px ); }
+
+  .order-right {
+    width: 500px; }
+    .order-right .cart {
+      width: 500px; } }
+@media (max-width: 1100px) {
+  .order-steps .step .item {
+    width: calc( 50% - 5px);
+    margin: 0 10px 10px 0; }
+    .order-steps .step .item:nth-child(even) {
+      margin-right: 0; }
+
+  .order-pays .pay-item {
+    width: calc( 50% - 5px);
+    margin-bottom: 10px; } }
+@media (max-width: 992px) {
+  .order-form {
+    flex-wrap: wrap; }
+
+  .order-left {
+    width: 100%; }
+
+  .order-right {
+    width: 100%;
+    padding: 30px 60px 0 60px; }
+    .order-right .cart {
+      width: 100%;
+      position: static !important; }
+
+  .order-steps .step .holder {
+    margin-right: 60px; }
+  .order-steps .step .item {
+    max-width: 150px; }
+    .order-steps .step .item:nth-child(even) {
+      margin-right: 10px; }
+
+  .order-pays {
+    justify-content: flex-start; }
+    .order-pays .pay-item {
+      max-width: 150px;
+      margin-right: 7px; } }
+@media (max-width: 680px) {
+  .order-steps .step {
+    background: none; }
+    .order-steps .step .holder {
+      margin-right: 0;
+      margin-left: 0; } }
 
 /*# sourceMappingURL=new_styles.css.map */
