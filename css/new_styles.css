@@ -51,7 +51,7 @@
       height: 18px;
       text-indent: -9999px;
       overflow: hidden;
-      background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/bg-tag-delete.png) no-repeat; }
+      background-image: url("../img/bg-tag-delete.png"); }
     .order-right .cart-item .packs {
       font-size: 15px;
       color: #838383;
@@ -189,7 +189,7 @@
   .order-form .location {
     margin: 18px 0 18px;
     padding: 0 0 0 55px;
-    background: url(http://domprobki.bi3x.org/local/templates/Akweb/images/ico02.png) no-repeat 0 75%;
+    background: url("../img/ico02.png") no-repeat 0 40%;
     font-size: 15px;
     color: #575757;
     background-size: 40px 36px; }
@@ -467,12 +467,100 @@
     justify-content: flex-start; }
     .order-pays .pay-item {
       max-width: 150px;
-      margin-right: 7px; } }
+      margin-right: 7px; }
+
+  .popover-container {
+    display: none !important; } }
 @media (max-width: 680px) {
+  .order-tabs .tabs-frame {
+    padding: 15px; }
+
+  .order-form .location {
+    margin: 0; }
+
   .order-steps .step {
     background: none; }
+    .order-steps .step .frame {
+      padding: 15px 15px; }
     .order-steps .step .holder {
       margin-right: 0;
-      margin-left: 0; } }
+      margin-left: 0; }
+    .order-steps .step .item {
+      width: 100%;
+      max-width: none;
+      margin: 0 0 10px 0; }
+      .order-steps .step .item > a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 70px;
+        padding: 10px 15px; }
+        .order-steps .step .item > a img {
+          margin-right: 15px;
+          height: 40px; }
+        .order-steps .step .item > a span {
+          margin-top: 0; }
+
+  .order-pays .pay-item {
+    max-width: none;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    margin-right: 0; }
+    .order-pays .pay-item img {
+      height: 40px;
+      margin-right: 10px; }
+    .order-pays .pay-item .soon {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 0; }
+
+  .order-right {
+    padding: 30px 0 0 0; }
+    .order-right .cart-item {
+      flex-wrap: wrap;
+      padding-right: 0;
+      padding-top: 0;
+      border-top: 0; }
+      .order-right .cart-item .image {
+        width: 100%;
+        height: auto; }
+      .order-right .cart-item .item-char {
+        width: 100%;
+        padding-left: 0; }
+        .order-right .cart-item .item-char .name {
+          margin-bottom: 10px;
+          margin-top: 10px; }
+        .order-right .cart-item .item-char .quantity {
+          flex-direction: column; }
+        .order-right .cart-item .item-char .cell-wrap {
+          flex-direction: column;
+          margin-bottom: 8px; }
+        .order-right .cart-item .item-char .cell {
+          margin-bottom: 8px; }
+      .order-right .cart-item .this-remove {
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 24px;
+        height: 24px;
+        transform: translateY(0);
+        background-size: contain;
+        background-repeat: no-repeat; }
+    .order-right .total-holder {
+      margin: 10px 0 0; }
+      .order-right .total-holder .total {
+        font-size: 14px; }
+        .order-right .total-holder .total td:first-child {
+          padding-right: 15px; }
+      .order-right .total-holder .total-price {
+        font-size: 20px; }
+
+  .order-box {
+    padding: 0;
+    text-align: center; } }
 
 /*# sourceMappingURL=new_styles.css.map */
