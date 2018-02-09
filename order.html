@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/additional.css">
@@ -10,9 +11,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="template_styles.css">
     <link rel="stylesheet" href="css/new_styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="adaptive">
 <div class="body">
     <div id="tpanel" class="tpanel">
         <div class="centering">
@@ -320,31 +324,22 @@
                                 <div class="frame">
                                     <div class="order-cells">
                                         <div class="delivery-list">
-                                            <div class="item" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                            <div class="item" data-tooltip="Сначала заполните<br/>контактные данные">
                                                 <a href="">
                                                     <img src="img/img-delivery01.png" alt="">
                                                     <span>Самовывоз со склада</span>
-                                                    <span class="popover">
-                                                        Сначала заполните контактные данные
-                                                    </span>
                                                 </a>
                                             </div>
-                                            <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
+                                            <div class="item" data-tooltip="Сначала заполните<br/>контактные данные">
                                                 <a href="">
                                                     <img src="img/img-delivery02.png" alt="">
                                                     <span>Курьером новой почтой</span>
-                                                    <span class="popover">
-                                                        Сначала заполните контактные данные
-                                                    </span>
                                                 </a>
                                             </div>
-                                            <div class="item" data-powertip="Сначала заполните<br/>контактные данные">
+                                            <div class="item" data-tooltip="Сначала заполните<br/>контактные данные">
                                                 <a href="">
                                                     <img src="img/img-delivery03.png" alt="">
                                                     <span>На отделение новой почты</span>
-                                                    <span class="popover">
-                                                        Сначала заполните контактные данные
-                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -359,40 +354,65 @@
                             <div class="holder">
                                 <div class="frame">
                                     <div class="order-pays">
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay1.png" alt="">
                                             <span>
                                                 При получении
                                             </span>
                                         </a>
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay2.png" alt="">
                                             <span>
                                                 Банковские карты
                                             </span>
+                                            <span class="soon">
+                                                <em>
+                                                    СКОРО
+                                                </em>
+                                            </span>
                                         </a>
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay3.png" alt="">
                                             <span>
                                                 Приват 24
                                             </span>
+                                            <span class="soon">
+                                                <em>
+                                                    СКОРО
+                                                </em>
+                                            </span>
                                         </a>
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay4.png" alt="">
                                             <span>
                                                 Кредит
                                             </span>
+                                            <span class="soon">
+                                                <em>
+                                                    СКОРО
+                                                </em>
+                                            </span>
                                         </a>
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay5.png" alt="">
                                             <span>
                                                 Безналом с НДС
                                             </span>
+                                            <span class="soon">
+                                                <em>
+                                                    СКОРО
+                                                </em>
+                                            </span>
                                         </a>
-                                        <a href="#" class="pay-item">
+                                        <a href="#" class="pay-item" data-tooltip="Сначала выберите<br/>способ доставки">
                                             <img src="img/pay5.png" alt="">
                                             <span>
                                                 Безналом без НДС
+                                            </span>
+                                            <span class="soon">
+                                                <em>
+                                                    СКОРО
+                                                </em>
                                             </span>
                                         </a>
                                     </div>
@@ -402,7 +422,9 @@
                     </div>
                     <div class="order-box">
                         <div class="comments-block">
-                            <a href="javascript:void(0);" class="link comments-link">Добавить комментарий к заказу</a>
+                            <div class="comments-link-wrap">
+                                <a href="javascript:void(0);" class="link comments-link">Добавить комментарий к заказу</a>
+                            </div>
                             <div class="row show-comment">
                                 <textarea placeholder="Комментарий к заказу" style="max-width:100%;min-height:120px"></textarea>
                             </div>
