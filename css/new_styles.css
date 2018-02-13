@@ -266,20 +266,6 @@
   padding: 0 0 20px; }
   .order-steps .step:last-child {
     background: none; }
-  .order-steps .step.active .title.ico-1 {
-    background: url("../img/ico-order01-active.png") no-repeat 0 50%; }
-  .order-steps .step.active .holder {
-    opacity: 1; }
-  .order-steps .step .frame {
-    padding: 25px; }
-  .order-steps .step .holder {
-    margin: 12px 0 0 60px;
-    background: #fff;
-    border-radius: 6px;
-    opacity: 0.4;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); }
   .order-steps .step .title {
     padding: 0 0 0 60px; }
     .order-steps .step .title.ico-1 {
@@ -293,6 +279,24 @@
       color: #575757;
       line-height: 50px;
       font-weight: 500; }
+  .order-steps .step.active .title.ico-1 {
+    background: url("../img/ico-order01-active.png") no-repeat 0 50%; }
+  .order-steps .step.active .ico-2 {
+    background: url("../img/ico-order02-active.png") no-repeat 0 50%; }
+  .order-steps .step.active .ico-3 {
+    background: url("../img/ico-order03-active.png") no-repeat 0 50%; }
+  .order-steps .step.active .holder {
+    opacity: 1; }
+  .order-steps .step .frame {
+    padding: 25px; }
+  .order-steps .step .holder {
+    margin: 12px 0 0 60px;
+    background: #fff;
+    border-radius: 6px;
+    opacity: 0.4;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); }
   .order-steps .step .item {
     text-align: center;
     width: 30%;
@@ -325,6 +329,8 @@
       padding: 10px;
       outline: none;
       position: relative; }
+      .order-steps .step .item > a.active {
+        border: 2px solid #C4010C; }
       .order-steps .step .item > a span {
         display: block;
         margin: 18px 0 0; }
@@ -356,6 +362,8 @@
     color: #969696;
     margin-bottom: 25px;
     position: relative; }
+    .order-pays .pay-item.active {
+      border: 2px solid #C4010C !important; }
     .order-pays .pay-item .soon {
       width: 100%;
       position: absolute;
