@@ -10,12 +10,13 @@ $(document).ready(function(){
 
     $("[data-tooltip]").hover(function(e){
         $(".body").css({"position":"relative"});
-           if(!$(".popover-container").length){
-               var str = $(this).attr("data-tooltip");
-               $("body").append(`<div class="popover-container">${str}</div>`);
-               $(".popover-container").css($(this).offset()).fadeIn(150);
-           }
-        }, function(){
+        if(!$(".popover-container").length && !$(this).closest('.step').hasClass('active')){
+            console.log('step-active:', $(this).closest('.step').hasClass('active'));
+            var str = $(this).attr("data-tooltip");
+            $("body").append(`<div class="popover-container">${str}</div>`);
+            $(".popover-container").css($(this).offset()).fadeIn(150);
+        }
+    }, function(){
         if($(".popover-container").length){
             $(".popover-container").remove();
         }

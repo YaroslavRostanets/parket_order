@@ -281,9 +281,9 @@
       font-weight: 500; }
   .order-steps .step.active .title.ico-1 {
     background: url("../img/ico-order01-active.png") no-repeat 0 50%; }
-  .order-steps .step.active .ico-2 {
+  .order-steps .step.active .title.ico-2 {
     background: url("../img/ico-order02-active.png") no-repeat 0 50%; }
-  .order-steps .step.active .ico-3 {
+  .order-steps .step.active .title.ico-3 {
     background: url("../img/ico-order03-active.png") no-repeat 0 50%; }
   .order-steps .step.active .holder {
     opacity: 1; }
@@ -958,5 +958,42 @@
     width: 95%;
     margin: 0 auto;
     float: none; } }
+/*--╨н╤В╨╛ ╨┤╨╛╨▒╨░╨▓╨╕╤В╤М--*/
+.detail-info .square-box > .row {
+  display: flex;
+  justify-content: space-between; }
+.detail-info .square-box .cell {
+  height: 30px;
+  display: flex;
+  align-items: center; }
+.detail-info .square-box .quantity {
+  background: transparent; }
+.detail-info .square-box input {
+  height: 100%;
+  width: 30px; }
+  .detail-info .square-box input:hover {
+    text-decoration: none; }
+.detail-info .square-box input[type="text"], .detail-info .square-box input[type="number"] {
+  background: #FFFFFF;
+  border: 1px solid #e8e8e8;
+  width: 37px;
+  height: 105%;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0 2px; }
+.detail-info .square-box h6 {
+  color: #c4010c;
+  font-size: 27px;
+  font-weight: bold; }
+
+.i-wrap {
+  position: relative; }
+  .i-wrap input {
+    padding-right: 20px; }
+  .i-wrap .measure {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%); }
 
 /*# sourceMappingURL=new_styles.css.map */

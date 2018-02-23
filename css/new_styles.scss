@@ -323,26 +323,6 @@
   &:last-child {
     background: none;
   }
-  &.active {
-    .title.ico-1 {
-      background: url("../img/ico-order01-active.png") no-repeat 0 50%;
-    }
-    .holder {
-      opacity: 1;
-    }
-  }
-  .frame {
-    padding: 25px;
-  }
-  .holder {
-    margin: 12px 0 0 60px;
-    background: #fff;
-    border-radius: 6px;
-    opacity: 0.4;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-  }
   .title {
     padding: 0 0 0 60px;
     &.ico-1 {
@@ -360,6 +340,32 @@
       line-height: 50px;
       font-weight: 500;
     }
+  }
+  &.active {
+    .title.ico-1 {
+      background: url("../img/ico-order01-active.png") no-repeat 0 50%;
+    }
+    .title.ico-2 {
+      background: url("../img/ico-order02-active.png") no-repeat 0 50%;
+    }
+    .title.ico-3 {
+      background: url("../img/ico-order03-active.png") no-repeat 0 50%;
+    }
+    .holder {
+      opacity: 1;
+    }
+  }
+  .frame {
+    padding: 25px;
+  }
+  .holder {
+    margin: 12px 0 0 60px;
+    background: #fff;
+    border-radius: 6px;
+    opacity: 0.4;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
   }
   .item {
     text-align: center;
@@ -399,6 +405,9 @@
       padding: 10px;
       outline: none;
       position: relative;
+      &.active {
+        border: 2px solid #C4010C;
+      }
       span {
         display: block;
         margin: 18px 0 0;
@@ -436,6 +445,9 @@
     color: #969696;
     margin-bottom: 25px;
     position: relative;
+    &.active {
+      border: 2px solid #C4010C !important;
+    }
     .soon {
       width: 100%;
       position: absolute;
@@ -1195,5 +1207,57 @@
     width: 95%;
     margin: 0 auto;
     float: none;
+  }
+}
+
+/*--Это добавить--*/
+.detail-info {
+  .square-box {
+    & > .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .cell {
+      height: 30px;
+      display: flex;
+      align-items: center;
+    }
+    .quantity {
+      background: transparent;
+    }
+    input {
+      height: 100%;
+      width: 30px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    input[type="text"], input[type="number"]{
+      background: #FFFFFF;
+      border: 1px solid #e8e8e8;
+      width: 37px;
+      height: 105%;
+      font-size: 15px;
+      font-weight: bolder;
+      margin: 0 2px;
+    }
+    h6 {
+      color: #c4010c;
+      font-size: 27px;
+      font-weight: bold;
+    }
+  }
+}
+
+.i-wrap {
+  position: relative;
+  input {
+    padding-right: 20px;
+  }
+  .measure {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
